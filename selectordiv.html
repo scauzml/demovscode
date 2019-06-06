@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="demo.css">
+<style>
+div[title]{
+    color: red;
+}
+div[title="demo"]{
+    font-size: 20px;
+}
+div[title*="demo"]{
+    text-align: center;
+}
+div[title="zh"],div[title^="zh-"]{
+    color:black;
+}
+</style>
+</head>
+<body>
+
+<div title="demo">a</div>
+<div title="demoddd">b</div>
+<div title="zh">c</div>
+<div title="zhdddd">d</div>
+<div>e</div>
+<div title="demo">f</div>
+<div title="demoddd">g</div>
+<div title="zh">h</div>
+<div title="zh-dddd">i</div>
+<div></div>
+</body>
+</html>
