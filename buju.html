@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <style type="text/css">
+      .left{
+          width: 200px;
+          height: 600px;
+          background: red;
+          float: left;
+          display: table;
+          text-align:center;
+          line-height: 600px;
+          color: #fff
+      }
+       .right{
+           margin-left: 210px;
+           height: 600px;
+           background: yellow;
+           text-align: center;
+           line-height: 600px
+       }
+       .left1{
+           width: 200px;
+           height: 300px;
+           background: yellow;
+           float: left;
+       }
+       .right1{
+        width: 150px; height: 300px; background: green; float: right;
+}
+       }
+       .middle{
+     height: 300px; background: red; margin-left: 220px; margin-right: 160px;
+}
+.left2{
+    background: yellow;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.middle2{
+    height: 300px;
+    margin: 0 220px;
+    background: red;
+}
+.right2{
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: green;
+}
+.wrapper{
+    /* 清除浮动 */
+    overflow: hidden;
+    
+}
+.middle3{
+    width: 100%;
+    float: left;
+}
+.middle3 .main{
+    margin:0 220px;
+    background: red;
+}
+.left3{
+    width: 200px;
+    height: 300px;
+    float: left;
+    background: green;
+    margin-left: -100%;
+}
+.right3{
+    width: 200px;
+    height: 300px;
+    float: left;
+    background: yellow;
+    margin-left: -200px;
+}
+.wrapper4{
+    display: flex;
+}
+.left4{
+    width: 200px;
+    height: 300px;
+    background: green;
+}
+.middle4{
+    width: 100%;
+    height: 300px;
+    background: red;
+    marign: 0 20px;
+}
+.right4{
+    width: 200px;
+    height: 300px;
+    background: yellow;
+}
+/*移动端样式*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+}
+@media screen and (min-width: 750px){
+  .media{
+    height: 100px;
+    background: red;
+  }
+}
+
+@media (max-width: 750px){
+  .media{
+    height: 200px;
+    background: green;
+  }
+}
+/* flex布局 */
+.container{
+    flex-direction: row   /* 默认 行正序*/ ||  row-reverse /*行倒序*/ ||  column  /* 列正序*/ || column-reverse /*列倒序*/
+}
+/* flex-wrap 表示当容器内部内容超出容器时，容器是否分行展示
+这个属性的值，有三种：nowrap(浏览器默认，不分行) 、wrap(超出的部分分行处理)、wrap-reverse(分行逆序).
+*/
+
+.container{
+   flex-wrap: nowrap || wrap || wrap-reverse;
+}
+/* flex-flow: 这个属性就是可以将上面两个属性合起来写的属性， */
+/*  justify-content:
+flex-start：对应的对齐方式是水平向左对齐。（浏览器默认）
+flex-end：对应的对齐方式是水平向右对齐。
+center：对应的对齐方式是居中对齐。
+space-between： 对应的是，每个元素之间中间流出间隙是一样的，两边无间隙。
+space-around：对应的是，每个元素周围的间隙是一样的，而不是元素之间的，因此，可以从途中看出两边的间隙会比中间小一半。
+space-evenly：对应的是，每个元素之间的间隙大小一致。 */
+.container{
+     flex-flow: row  wrap;
+     justify-content: flex-start || flex-end || center || space-between || space-around || space-evenly
+}
+/* align-items
+
+flex-start: 对应的对齐方式是垂直向上对齐。
+flex-end： 对应的对齐方式是垂直向下对齐。
+center：对应的对齐方式是垂直居中对齐。
+stretch：对应的对齐方式是将整个子项目的长度拉伸到最大块的高度(浏览器默认)
+baseline： 对应的对齐方式是子项目内部的文字基线对齐 */
+.container{
+     align-items: flex-start || flex-end || center || stretch || baseline;
+}
+/* align-content: 表示在对行的情况下，每行所对应的垂直方向上的对齐方式。
+主要有六种对齐方式：flex-start、flex-end、center、stretch、space-between、
+space-around。
+lex-start：对应的是每一行在垂直方向上向上对齐的方式
+flex-end：对应的是每一行在垂直方向上向下对齐的方式
+center：对应的是每一行在垂直方向上居中对齐的方式
+stretch：对应的是每一行延展到铺满整个垂直方向。
+space-between：对应的就是每行之间留有空隙，而两边没有空隙
+space-around：对应的就是每行周围的空隙均相等
+
+ */
+
+    </style>
+</head>
+<body>
+    <p>float + margin：两栏布局一栏定宽，一栏自适应。这样子做的好处是定宽的那一栏可以做广告，自适应的可以作为内容主体</p>
+    <div class="left">定宽</div>
+    <div class="right">自适应</div>
+    <p>三栏布局，两边定宽，然后中间的width是auto的，可以自适应内容，再加上margin边距，来进行设定。
+
+            三栏布局可以有4种实现方式，每种实现方式都有各自的优缺点。</p>
+          <p>1.使用左右两栏使用float属性，中间栏使用margin属性进行撑开，注意的是html的结果
+                缺点是：1. 当宽度小于左右两边宽度之和时，右侧栏会被挤下去；2. html的结构不正确
+          </p>
+            <div class="left1">左栏</div>
+            <div class="right1">右栏</div>
+            <div class="middle1">中间栏</div>
+<p>2. 使用position定位实现，即左右两栏使用position进行定位，中间栏使用margin进行定位</p>            
+           <div class="left2">左栏</div>
+          <div class="middle2">中间栏</div>
+         <div class="right2">右栏</div>
+<div>
+    <p>3. 使用float和BFC配合圣杯布局
+
+            将middle的宽度设置为100%，然后将其float设置为left，其中的main块设置margin属性，然后左边栏设置float为left，之后设置margin为-100%，右栏也设置为float：left，之后margin-left为自身大小。
+            缺点是：1. 结构不正确 2. 多了一层标签
+        </p>
+            <div class="wrapper">
+                <div class="middle3">
+                    <div class="main">中间</div>
+                </div>
+              <div class="left3">
+                  左栏
+              </div>
+              <div class="right3">
+                  右栏
+              </div>
+
+            </div>
+</div>
+<p>flex布局除了兼容性，一般没有太大的缺陷</p>
+<div class="wrapper4">
+        <div class="left4">左栏</div>
+        <div class="middle4">中间</div>
+        <div class="right4">右栏</div>
+    </div>
+    <p>移动端的时代</p>
+    <p>1.媒体查询 </p>
+    <p>2弹性盒子flex其实移动端会经常使用到flex布局，因为在简单的页面适配方面，flex可以起到很好的拉伸的效果</p>
+     <p>rem适配rem可以说是移动端适配的一个神器。类似于手淘等界面，都是使用的rem进行的适配。这种界面有个特点就是页面元素的复杂度比较高，而使用flex进行布局会导致页面被拉伸，但是上下的高度却没有变化等问题。</p>
+
+     <p>flex弹性布局
+            flex布局，被称为弹性布局。看懂flex可以从两个地方出发：容器和子项目。
+
+            何为容器，就是设定display为flex的地方
+     </p>
+   <div class="maind" style="width: 600px;margin:0 auto;background: yellow">
+
+   </div>
+</body>
+</html>

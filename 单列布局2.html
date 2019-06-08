@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单列布局2</title>
+    <style>
+    .layout{
+        max-width: 960px;
+    margin: 0 auto;
+        background: yellow;
+    }
+    </style>
+</head>
+<!-- 一种是header、content、footer宽度都相同，其一般不会占满浏览器的最宽宽度，但当浏览器宽度缩小低于其最大宽度时，宽度会自适应。 -->
+<body>
+        <div id="header">
+                <div class="layout">头部2</div>
+              </div>
+              <div id="content" class="layout">内容2</div>
+              <div id="footer">
+                <div class="layout">尾部2</div>
+              </div>
+</body>
+</html>

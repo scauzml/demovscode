@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单列布局2</title>
+    <style>
+        .sub,
+        .extra {
+            position: absolute;
+            top: 0;
+            width: 200px;
+            background: yellow;
+        }
+
+        .sub {
+            left: 0;
+        }
+
+        .extra {
+            right: 0;
+        }
+
+        .main {
+            margin: 0 200px;
+            background:red;
+        }
+    </style>
+
+</head>
+<!-- 对两边侧栏分别设置宽度，设置定位方式为绝对定位。
+设置两侧栏的top值都为0，设置左侧栏的left值为0， 右侧栏的right值为0。
+对主面板设置左右外边距，margin-left的值为左侧栏的宽度，margin-right的值为右侧栏的宽度。 -->
+<!-- 二列的实现方法
+
+如果是左边带有侧栏的二栏布局，则去掉右侧栏，不要设置主面板的margin-right值，其他操作相同。反之亦然。 -->
+<body>
+    <div class="sub">left</div>
+    <div class="main">main</div>
+    <div class="extra">right</div>
+</body>
+
+</html>

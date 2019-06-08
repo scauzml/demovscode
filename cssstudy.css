@@ -1,0 +1,153 @@
+html{
+    font-size: 50px;
+    font-family:"sans serif"
+}
+body{
+    background-image: url("background.png")
+}
+.pdemo{
+    color:rgb(255,0,0);
+    font-size: 0.1rem;
+    text-align: center
+}
+p:nth-child(2){
+    text-align: end;
+}
+p:nth-child(3){
+    text-align: inherit
+}
+p:nth-child(4){
+    text-align:initial;
+}
+p:nth-child(5){
+    text-align: start;
+}
+p:nth-child(6){
+    text-align: justify
+}
+h1,h2{
+    color:green;
+    font-size: 0.5rem;
+}
+li strong{
+    font-size: 0.1rem;
+    font-style: italic;
+    font-weight: normal;
+}
+[title]{
+    font-size: .3rem;
+     color: blue;
+}
+[title~=hello]{
+    color:red;
+}
+input[type="text"]{
+    display: block;
+    background-color: yellow;
+    width: 150px;
+
+}
+.back{
+    background-color: yellow;
+    padding: .2rem;
+}
+.flower{
+    background-image: url("demo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.radio{
+    background-image: url("demo.png");
+
+}
+.attachment{
+    background-attachment: fixed;
+    background-image: url("demo.png");
+    background-repeat: no-repeat;
+    height: 100px;
+
+}
+.suojin{
+    text-indent: .1rem;
+}
+.text-align-justify{
+    text-align: justify;
+
+}
+p.spread {word-spacing: 30px;}
+p.tight {word-spacing: -0.5em;}
+h1 {letter-spacing: -0.5em}
+h4 {letter-spacing: 20px}
+.transform{
+    text-transform: uppercase;
+}
+.transform1{
+    text-transform: lowercase;
+}
+.transform2{
+    text-transform: capitalize;
+}
+.decoration{
+    text-decoration: underline;
+}
+.decoration1{
+    text-decoration: none;
+}
+.decoration2{
+    text-decoration: overline;
+}
+.decoration3{
+    text-decoration: line-through;
+}
+.decoration4{
+    text-decoration: blink;
+}
+.pre-wrap p{
+
+    white-space: pre-wrap;
+}
+.pre-line p{
+    white-space: pre-line;
+}
+.direction{
+    direction: rtl;
+}
+.fontshezhi{
+    font-family: Times, TimesNR, 'New Century Schoolbook',
+    Georgia, 'New York', serif;
+    font-style:oblique;
+    font-weight: bold;
+
+}
+.normal{
+    font-variant: normal;
+}
+.small{
+    font-variant: small-caps;
+}
+ul{
+    list-style-type: none;
+}
+
+.ulimage{
+    list-style-image: url("demo.png");
+    list-style-position: inside;
+}
+.table,td,th{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+.outline{
+    border:red solid thin;
+outline:#00ff00 dotted thick;
+}
+span
+{
+display: block
+}
+.visiable{
+    visibility: hidden;
+}
+.navinline li{
+ display: inline;
+}

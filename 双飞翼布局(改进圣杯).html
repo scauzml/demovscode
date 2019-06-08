@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单列布局2</title>
+    <style>
+.main-wrap {        
+    float: left;       
+    width: 100%;   
+    background:yellow;
+ }  
+ .sub {       
+    float: left;        
+    width: 190px;        
+    margin-left: -100%; 
+    background: red;
+}   
+.extra {        
+    float: left;        
+    width: 230px;   
+    margin-left: -230px;      
+    background: red;
+
+ }
+.main {    
+    margin: 0 230px 0 190px;
+}
+    </style>
+<!-- 主面板部分优先渲染（一般主面板会比侧栏内容重要）。
+圣杯采用的是padding，而双飞翼采用的margin，解决了圣杯布局main的最小宽度不能小于左侧栏的缺点。
+双飞翼布局不用设置相对布局，以及对应的left和right值。
+通过引入相对布局，可以实现三栏布局的各种组合，例如对右侧栏设置position: relative; left: 190px;,可以实现sub+extra+main的布局。
+二列的实现方法
+
+如果是左边带有侧栏的二栏布局，则去掉右侧栏，不要设置main-wrap的margin-right值，其他操作相同。反之亦然。 -->
+<!-- 原理说明：
+
+双飞翼布局和圣杯布局的思想有些相似，都利用了浮动和负边距，但双飞翼布局在圣杯布局上做了改进，在main元素上加了一层div, 并设置margin,由于两侧栏的负边距都是相对于main-wrap而言，main的margin值变化便不会影响两个侧栏，因此省掉了对两侧栏设置相对布局的步骤。 -->
+</head>
+<body>
+        <div class="main-wrap">
+                <div class="main">#main</div>
+          </div>
+          <div class="sub">left</div>        
+          <div class="extra">right</div>        
+</body>
+</html>

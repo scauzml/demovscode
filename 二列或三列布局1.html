@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单列布局2</title>
+    <style>
+.sub{
+    width: 100px;
+    float: left;
+    background: yellow;
+}
+.extra{
+    width: 200px;
+    float: right;
+    background: red;
+}
+.main{
+    margin-left: 100px; 
+    margin-right: 200px;
+    background: gray;
+}
+    </style>
+    <!-- 注意DOM文档的书写顺序，先写两侧栏，再写主面板，更换后则侧栏会被挤到下一列（圣杯布局和双飞翼布局都会用到）。 　 -->
+    <!-- 二列的实现方法
+
+如果是左边带有侧栏的二栏布局，则去掉右侧栏，不要设置主面板的margin-right值，其他操作相同。反之亦然。 -->
+</head>
+<body>
+        <div id="content">
+                
+                <div class="sub">sub</div>
+                <div class="extra">extra</div>
+                <div class="main">main</div>
+            </div>      
+</body>
+</html>
