@@ -1,0 +1,194 @@
+html{
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+.layout {
+    display: flex;
+    
+}
+.main {
+    flex: 1;
+    max-width: 960px;
+    margin: 0 auto;
+  
+}
+.header{
+   
+    height: 200px;
+    text-align: center;
+
+}
+
+
+.headerleft{
+    float: left;
+    width: 300px;
+    height: 100%;
+    text-align: center;
+}
+.headeright{
+    float:right; 
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center ;
+}
+.name{
+    margin-top: 60px;
+}
+.jiesao{
+    font-style: oblique;
+}
+.touxiang{
+    margin: auto;
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #ced4da no-repeat center/cover;
+    position: relative;
+    text-align: center;
+    color: #868e96;
+    font-weight: 600;
+    vertical-align: bottom;
+    font-size: .875rem;
+}
+.middle{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    background: rgb(245, 245, 245);
+    border-top: 5px solid rgb(81, 176, 206);
+
+}
+.information{
+    width: 440px;
+    margin: 30px 20px 30px 20px;
+   
+    
+}
+.competences{
+    width: 440px;
+    margin: 30px 20px 30px 20px;
+   
+}
+.experiencs{
+    
+    
+    width: 920px;
+    margin: 30px 20px 30px 20px;
+   
+}
+.intitle{
+    display: flex;
+    height: 45px;
+    align-items: center;
+    border-bottom:3px solid rgb(226, 226, 226);
+    padding-bottom: 3px;
+}
+.title{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:rgb(81, 176, 206);
+}
+svg{
+    margin: 7px 7px 7px 7px;
+}
+.message{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.contentmessage{
+    text-indent: 2em;
+}
+.progress{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.progressentity{
+    
+    width: 100%;
+    height: 5px;
+    background: rgb(226, 226, 226);
+
+}
+#git{
+
+    width: 85%;
+    height: 5px;
+   background:rgb(81, 176, 206);
+   
+}
+#Html{
+
+    width: 85%;
+    height: 5px;
+   background:rgb(81, 176, 206);
+   
+}
+#Css{
+
+    width: 70%;
+    height: 5px;
+   background:rgb(81, 176, 206);
+   
+}
+#Javascript{
+
+    width: 60%;
+    height: 5px;
+   background:rgb(81, 176, 206);
+   
+}
+#SpringBoot{
+
+    width: 75%;
+    height: 5px;
+   background:rgb(81, 176, 206);
+   
+}
+.progressentity span{
+    visibility: hidden;
+}
+.progresscontent{
+    margin: 20px 0 20px 0;
+}
+.addressanddate{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 20px 60px;
+    color:gray;
+    
+}
+.address{
+    display: flex;
+    align-items: center;
+}
+.date{
+    display: flex;
+    align-items: center;
+}
+.feather-map-pin{
+    width: 16px;
+    height: 16px;
+}
+.feather-clock{
+    width: 16px;
+    height: 16px;
+}
+.epname{
+    margin: 20px 0 0 50px;
+    color: rgb(81, 176, 206);
+    font-weight: bold;
+}
+.epcontent{
+    margin: 20px 0 20px 50px;
+    text-indent: 1.7em;
+}
+.epcontentp{
+    font-size: 14px;
+}

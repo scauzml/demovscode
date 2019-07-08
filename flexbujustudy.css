@@ -1,0 +1,61 @@
+.layout{
+    display: flex;
+     /* flex-direction: row;
+     flex-wrap: wrap; */
+     /* 主轴上的方向的item排列方式，与是否换行 */
+     flex-flow: row  wrap;
+     /* 主轴上的对齐方式 */
+     justify-content: space-around  ;
+}
+
+.aside{
+    width: 200px;
+    background: green;
+}
+.main{
+
+    background: yellow;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+     flex: 1;  
+}
+#m5{
+    display: flex;
+    flex-flow: row wrap;
+    /* flex居中设置 */
+    /* align-items: center;
+    justify-content: center; */
+    /* align-items: baseline; */
+    /* align-content: center; */
+}
+.mian5{
+    background:green;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    /* flex: 1; */
+    /* item排列顺序 */
+    order: 2;
+    flex-shrink: 1;
+    flex-basis: 40px;
+    
+}
+.mian6{
+    background:green;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    /* flex-grow: 2; */
+    order: 1;
+    flex-shrink: 1;
+}
+.mian7{
+    background:green;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    /* flex: 1; */
+    order: 3;
+    flex-shrink: 1;
+}

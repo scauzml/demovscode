@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="css.css">
+    <title>学习js</title>
+    <!-- 加入CDATA片段包含javascript,解决XHTML对于符号的解析问题，感觉一般不用 -->
+    <script>
+    // <![CDATA[
+
+    // ]]>
+    </script>
+    <style>
+    p{
+        /* float: left; */
+      /* display: inline; */
+      /* display: inline-block; */
+      float: top;
+    }
+    </style>
+</head>
+<body>
+  
+    <!-- defer表示脚本延迟到整个页面解析完毕后执行 -->
+    <!-- <script src="studyjs2.js" defer="defer"></script> -->
+    <!-- 异步加载页面，和脚本，建议不要在加载脚本时进行修改DOM -->
+    <script src="studyjs3.js" async="async"></script>
+    
+    <img src="#" name="myImage">
+    <div id="divdemo" class="bd" title="Body" lang="en" dir="ltr">dd</div>
+    <div> </div>
+    <div></div>
+
+    <div class="myDiv">
+        <div>Hello</div>
+        <p>World</p>
+    </div>
+    <div id="changecss">js改变css</div>
+    <div id="div1">
+      <p><b>hello</b>world</p>
+      <ul>
+        <li>lisst item 1</li>
+        <li>lisst item 2 </li>
+        <li>lisst item 3</li>
+      </ul>
+      <div>a</div>
+    </div>
+      <!-- 放在后面，页面加载更快 -->
+      <script type="text/javascript" src="studyjs.js"></script>
+</body>
+</html>
